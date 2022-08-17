@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import { api } from './services/api';
 import logo from './logo.svg';
 import './App.css';
-import { api } from './services/api';
 
 interface IRes{
   periodo: string;
@@ -20,15 +20,18 @@ function App() {
 
   function handleClick(){
     api.get(`${seuNome}`)
-    .then((res) => {
-      if(res.data.erro) {
-            alert('Nome não encontrado');
-          }
-      setNome(res.data);
+    .then((response) => {
+        if(response.data.erro) {
+              alert('Nome não encontrado :(');
+        }
+        setNome(response.data);
     })
     .catch(err => console.log(err));
   }
-  // console.log(nomes);
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>){
+    setSeuNme(e.target.value);
+  }
 
   return (
     <div className="App">
@@ -40,29 +43,29 @@ function App() {
             type="text"
             placeholder='Digite seu nome'
             value={seuNome}
-            onChange={(e) => setSeuNme(e.target.value)}
+            onChange={handleChange}
           />
           <button
             type="button"
             onClick={handleClick}
           >Consultar</button>
-          {nomes.map((dataNome, index) => {
-            return (
-              <div key={index}>
-                <p><strong>{dataNome.nome}</strong></p>
-                <p>{dataNome.localidade}</p>
-          {dataNome.res.map((dataRes, index) => {
-            return (
-              <div key={index}>
-                <p>{dataRes.periodo}</p>
-                <p>{dataRes.frequencia}</p>
-              </div>
-            )
+          {
+            nomes?.map((dataNome, index) => {
+              return (
+                <div key={index}>
+                  <p><strong>{dataNome.nome}</strong></p>
+                  <p>{dataNome.localidade}</p>
+                  {
+                    dataNome.res?.map((dataRes, index) => {
+                      return (
+                        <div key={index}>
+                          <p>Na decada <span>{(dataRes.periodo)}</span> a fequência de nascidos com seu nome foram <span>{(dataRes.frequencia).toLocaleString('pt-BR')}</span> pessoas.</p>
+                        </div>
+                      )
+                  })}
+                </div>
+              )
           })}
-              </div>
-            )
-          })}
-          
         </main>
       </header>
     </div>
