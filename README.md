@@ -1,4 +1,4 @@
-# Alicação que obtém a frequência do nome por decada
+# Alicação que obtém a frequência do nome por década
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/81385265/185243810-e62bbdf0-4e1f-4ef4-9f76-87177b53bc7d.png" />
