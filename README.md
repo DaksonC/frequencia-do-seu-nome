@@ -1,4 +1,4 @@
-# Alicação que obtém a frequência do nome por década
+# Aplicação que obtém a frequência do nome por década
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/81385265/185251416-cb325b36-58b6-4a84-8503-dc85e29695ca.png" />
