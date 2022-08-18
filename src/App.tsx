@@ -59,7 +59,7 @@ function App() {
                     dataNome.res?.map((dataRes, index) => {
                       return (
                         <div key={index}>
-                          <p>Na decada <span>{(dataRes.periodo)}</span> a fequência de nascidos com seu nome foram <span>{(dataRes.frequencia).toLocaleString('pt-BR')}</span> pessoas.</p>
+                          <p>Na década <span>{(dataRes.periodo)}</span> a frequência de nascidos com seu nome foram <span>{(dataRes.frequencia).toLocaleString('pt-BR')}</span> pessoas.</p>
                         </div>
                       )
                   })}
