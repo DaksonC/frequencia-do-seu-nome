@@ -40,6 +40,9 @@ input{
   outline: none;
 }
 
+input:focus{
+  border: 3px solid #61dafb;
+}
 button{
   width: 30%;
   height: 41px;
@@ -55,9 +58,6 @@ button{
 button:hover{
   background-color: #61dafb;
   color: #333;
-}
-button:focus{
-  border: 3px solid #61dafb;
 }
 span{
   color: #61dafb;
