@@ -1,6 +1,7 @@
 {
   "name": "frequencia-do-seu-nome",
   "version": "0.1.0",
+  "homepage": "frequencia-do-seu-nome/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
