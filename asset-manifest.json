@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/frequencia-do-seu-nome/static/css/main.6604de09.css",
+    "main.css": "/frequencia-do-seu-nome/static/css/main.ba8b37fe.css",
     "main.js": "/frequencia-do-seu-nome/static/js/main.a8331458.js",
     "static/js/787.ec25126d.chunk.js": "/frequencia-do-seu-nome/static/js/787.ec25126d.chunk.js",
     "static/media/logo.svg": "/frequencia-do-seu-nome/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/frequencia-do-seu-nome/index.html",
-    "main.6604de09.css.map": "/frequencia-do-seu-nome/static/css/main.6604de09.css.map",
+    "main.ba8b37fe.css.map": "/frequencia-do-seu-nome/static/css/main.ba8b37fe.css.map",
     "main.a8331458.js.map": "/frequencia-do-seu-nome/static/js/main.a8331458.js.map",
     "787.ec25126d.chunk.js.map": "/frequencia-do-seu-nome/static/js/787.ec25126d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6604de09.css",
+    "static/css/main.ba8b37fe.css",
     "static/js/main.a8331458.js"
   ]
 }
