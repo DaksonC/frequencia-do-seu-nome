@@ -21,10 +21,10 @@ function App() {
   function handleClick(){
     api.get(`${seuNome}`)
     .then((response) => {
-        if(response.data.erro) {
-              alert('Nome não encontrado :(');
-        }
-        setNome(response.data);
+      setNome(response.data);
+      if(response.data.length === 0){
+        alert('Ah! 😩 Seu nome não consta nesse CENSO do IBGE! 😩')
+      }
     })
     .catch(err => console.log(err));
   }
