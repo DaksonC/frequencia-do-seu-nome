@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { api } from './services/api';
-import logo from './logo.svg';
+import  logo  from './logo.svg';
 import './App.css';
 
 interface IRes{
@@ -17,8 +17,9 @@ interface IBGEres {
 function App() {
   const [nomes, setNome] = useState<IBGEres[]>([]);
   const [seuNome, setSeuNme] = useState<string>('');
-
-  function handleClick(){
+ 
+  function handleClick(e: React.FormEvent<HTMLInputElement>){
+    e.preventDefault();
     api.get(`${seuNome}`)
     .then((response) => {
       setNome(response.data);
@@ -28,27 +29,36 @@ function App() {
     })
     .catch(err => console.log(err));
   }
-
+  
   function handleChange(e: React.ChangeEvent<HTMLInputElement>){
+    e.preventDefault();
     setSeuNme(e.target.value);
   }
 
+  
+ 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <main>
           <h1>Consultar a frequência do seu nome.</h1>
-          <input 
-            type="text"
-            placeholder='Digite seu nome'
-            value={seuNome}
-            onChange={handleChange}
-          />
-          <button
-            type="button"
-            onClick={handleClick}
-          >Consultar</button>
+          <form className="form">
+            <input 
+              className="input"
+              type="text"
+              placeholder='Digite seu nome'
+              value={seuNome}
+              onChange={handleChange}
+              autoFocus
+            />
+            <input
+              className="button"
+              type="submit"
+              onClick={handleClick}
+              value="Consultar 🔍"
+            />
+          </form>
           {
             nomes?.map((dataNome, index) => {
               return (

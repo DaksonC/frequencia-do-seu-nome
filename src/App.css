@@ -40,24 +40,33 @@ input{
   outline: none;
 }
 
-input:focus{
+input.input:focus{
   border: 3px solid #61dafb;
 }
-button{
-  width: 30%;
-  height: 41px;
+input.input{
+  width: 40rem;
+  height: 3rem;
   border-radius: 5px;
   border: 1px solid #61dafb;
   background-color: #282c34;
   padding: 0 10px;
   color: #61dafb;
   font-size: 16px;
+}
+input.button{
+  width: 7rem;
+  height: 3rem;
+  padding: 4px;
+  font-size: 1rem;
+  border: 1px solid #61dafb;
+  color: #fff;
   outline: none;
   cursor: pointer;
+  background-color: #282c34;
 }
-button:hover{
+input.button:hover{
   background-color: #61dafb;
-  color: #333;
+  color: #282c34;
 }
 span{
   color: #61dafb;
