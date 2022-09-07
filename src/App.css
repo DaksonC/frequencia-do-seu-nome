@@ -29,8 +29,8 @@
 }
 
 input{
-  width: 50%;
-  height: 40px;
+  width: 100%;
+  height: 3rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 0 10px;
@@ -40,9 +40,6 @@ input{
   outline: none;
 }
 
-input.input:focus{
-  border: 3px solid #61dafb;
-}
 input.input{
   width: 40rem;
   height: 3rem;
@@ -51,8 +48,16 @@ input.input{
   background-color: #282c34;
   padding: 0 10px;
   color: #61dafb;
-  font-size: 16px;
+  font-size: 1.6rem;
 }
+
+input.input:focus{
+  border: 3px solid #61dafb;
+}
+input.input::placeholder{
+  font-size: 1.6rem;
+}
+
 input.button{
   width: 7rem;
   height: 3rem;
